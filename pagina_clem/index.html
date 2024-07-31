@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Personaje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Accents</h1>
+        <div class="buttons">
+            <button onclick="filter('spanish')">Spanish</button>
+            <button onclick="filter('french')">French</button>
+            <button onclick="filter('english')">English</button>
+        </div>
+        <div class="characters">
+            <div class="character" data-language="french" onclick="selectCharacter('native-france')">
+                <img src="img/character1.png" alt="Native from France">
+                <p>Native from France</p>
+                <span>Vous pratiquerez un accent natif de la France</span>
+            </div>
+            <div class="character" data-language="french" onclick="selectCharacter('second-learner')">
+                <img src="img/character2.png" alt="Second Language Learner">
+                <p>Second Language Learner</p>
+                <span>Vous pratiquerez un accent de second apprenant de la France</span>
+            </div>
+            <div class="character" data-language="spanish" onclick="selectCharacter('native-spanish')">
+                <img src="img/character3.png" alt="Native from spanish">
+                <p>native from spanish</p>
+                <span>Practicaras un acento español nativo</span>
+            </div><!-- Agrega más personajes según sea necesario -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

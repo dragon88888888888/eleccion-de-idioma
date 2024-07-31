@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="conversation-container">
+        <h2>Dans le Banque</h2>
+        <div id="character-info">
+            <!-- Aquí se mostrará la información del personaje seleccionado -->
+        </div>
+        <div class="conversation">
+            <p>Bonjour ! Bien sûr, je serais ravi de vous aider à ouvrir un compte bancaire. Commençons notre conversation. Vous pouvez commencer par poser vos questions ou me donner les informations nécessaires pour que je puisse vous aider.</p>
+            <input type="text" placeholder="Write your response or use the microphone">
+            <button>Submit</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const character = params.get('character');
+            const characterInfo = document.getElementById('character-info');
+            
+            if (character === 'native-france') {
+                characterInfo.innerHTML = '<img src="img/character1.png" alt="Native from France"><p>Native from France</p><span>Vous pratiquerez un accent natif de la France</span>';
+            } else if (character === 'second-learner') {
+                characterInfo.innerHTML = '<img src="img/character2.png" alt="Second Language Learner"><p>Second Language Learner</p><span>Vous pratiquerez un accent de second apprenant de la France</span>';
+            }
+            else if (character === 'native-spanish') {
+                characterInfo.innerHTML = '<img src="img/character3.png" alt="native from spanish"><p>native from spanish</p><span>practicaras un acento nativo español</span>';
+            }// Agrega más casos según sea necesario
+        });
+    </script>
+</body>
+</html>
+l>
